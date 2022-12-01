@@ -11,7 +11,7 @@ export default class RedComercial {
     private generadorId : Generador;
     
     /**
-     * Constructor de RedComercial
+     * Constructor de la RedComercial
      * @param nombre string de la RedComercial.
      * @param sucursales array de Sucursales.
      * @param proveedores array de Proveedores.
