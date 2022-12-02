@@ -7,6 +7,15 @@ Este repositorio contiene un trabajo grupal de caracter obligatorio para aplicar
 - Silvio Alvarez
 - Andrés Fernández
 
+## Como probar la Aplicación 
+Para poder probarlo debe:
+- Abrir una terminal [git bash / PowerShell / cmd] en su pc en la carpeta que desee.
+- Clonar el repositorio con el siguiente comando >git clone https://github.com/AndresLeoFernandez/Veterinarias-Dorrego-2022-Grupo-5.git
+- Luego acceder a la carpeta >cd Veterinarias-Dorrego-2022-Grupo-5
+- Ejecutar el siguiente comando para descargar las librerias que utiliza >nmp i 
+- correr el programa >node main.js 
+
+
 # Enunciado Veterinarias
 Nuestro cliente es una red de veterinarias y desea poder acceder a la siguiente información:
  - Sucursales de Veterinarias
