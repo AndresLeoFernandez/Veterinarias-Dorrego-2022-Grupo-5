@@ -37,7 +37,6 @@ function operacionesPacientes() {
                             var especie = readlineSync.question("Ingrese la especie: [gato / perro ]: ", { limit: ['gato', 'perro', 'exotico'] });
                             var mascotaNueva = new Paciente_1["default"](ClienteActual[0].getId(), nombre, especie);
                             ClienteActual[0].agregaMascota(mascotaNueva);
-                            /*mostrar.msgInfo(sucursalNueva.verSucursalEnLinea(false));*/
                         }
                         else {
                             continuar = false;
@@ -126,14 +125,12 @@ function operacionesSucursales() {
     var opeSuc = ['ALTA SUCURSAL NUEVA', 'MODIFICACION SUCURSAL EXISTENTE', 'BAJA SUCURSAL', 'Ver TODAS las SUCURSALES'];
     var continuar = true;
     while (continuar) {
-        //console.log(`\n`);
         mostrar.msgInfo("\nOPERACIONES CON SUCURSALES");
         var indice = readlineSync.keyInSelect(opeSuc, 'Que desea hacer:', { cancel: 'Volver Atras' });
-        //console.log(`\n\n`);
         switch (indice) {
             case 0:
                 mostrar.msgInfo(opeSuc[indice]);
-                var nombre = readlineSync.question(mostrar.msgWarning("Ingrese el Nombre de la NUEVA SUCURSAL: "), { limit: '^[a-zA-ZñÑáéíóú]+$', limitMessage: 'Debe ingresar solo letras' });
+                var nombre = readlineSync.question(mostrar.msgWarning("Ingrese el Nombre de la NUEVA SUCURSAL: "));
                 var dire = readlineSync.question(mostrar.msgWarning("Ingrese la Direccion: "));
                 var sucursalNueva = redVeterinaria.altaSucursal(nombre.toUpperCase(), dire.toUpperCase());
                 pausar();
@@ -143,7 +140,7 @@ function operacionesSucursales() {
                     var sucursalActual = obtenerSucursalDeTrabajo(redVeterinaria);
                     if (sucursalActual[1] == true) {
                         mostrar.msgInfo(opeSuc[indice]);
-                        var nombreMod = readlineSync.question(mostrar.msgWarning("Ingrese el NUEVO nombre para la Sucursal: "), { limit: '^[a-zA-ZñÑáéíóú]+$', limitMessage: 'Debe ingresar solo letras' });
+                        var nombreMod = readlineSync.question(mostrar.msgWarning("Ingrese el NUEVO nombre para la Sucursal: "));
                         var direMod = readlineSync.question(mostrar.msgWarning("Ingrese la NUEVA direcci\u00F3n para la Sucursal: "));
                         redVeterinaria.modificaSucursal(sucursalActual[0].getId(), nombreMod, direMod);
                     }
@@ -193,7 +190,6 @@ function operacionesProveedores() {
         console.log("\n\n");
         mostrar.msgInfo(" OPERACIONES CON PROVEEDORES");
         var indice = readlineSync.keyInSelect(opeProv, 'Que desea hacer:', { cancel: 'Volver Atras' });
-        /*console.log(`\n\n`);*/
         switch (indice) {
             case 0:
                 var nombre = readlineSync.question(mostrar.msgWarning("Ingrese el nombre del NUEVO Proveedor: "));
