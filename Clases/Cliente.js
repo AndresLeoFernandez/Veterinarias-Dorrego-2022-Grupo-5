@@ -102,10 +102,10 @@ var Cliente = /** @class */ (function () {
      *
      * @param id
      */
-    Cliente.prototype.eliminarMascota = function (id) {
+    Cliente.prototype.eliminarMascota = function (id, nombre) {
         var encontrado = false;
         for (var i = 0; i < this.listaMascotas.length; i++) {
-            if (id == this.listaMascotas[i].getIdCliente()) {
+            if (id == this.listaMascotas[i].getIdCliente() && (nombre == this.listaMascotas[i].getNombre())) {
                 this.listaMascotas.splice(i, 1);
                 encontrado = true;
                 break;

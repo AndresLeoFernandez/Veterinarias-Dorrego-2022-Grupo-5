@@ -106,10 +106,10 @@ export default class Cliente {
      * 
      * @param id 
      */
-    public eliminarMascota ( id: number): void {
+    public eliminarMascota ( id: number, nombre:string ): void {
         let encontrado: boolean = false;
         for (let i : number = 0; i < this.listaMascotas.length; i++){  
-            if (id == this.listaMascotas[i].getIdCliente()){
+            if (id == this.listaMascotas[i].getIdCliente()&&(nombre == this.listaMascotas[i].getNombre())){
                 this.listaMascotas.splice(i, 1);
                 encontrado = true;
                 break
