@@ -66,7 +66,7 @@ function operacionesPacientes() {
                             var mascotaActual = obtenerMascotaDeTrabajo(ClienteActual[0]);
                             if (mascotaActual[1] == true) {
                                 mostrar.msgInfo(opePac[indice]);
-                                ClienteActual[0].eliminarMascota(mascotaActual[0].getIdCliente());
+                                ClienteActual[0].eliminarMascota(mascotaActual[0].getIdCliente(), mascotaActual[0].getNombre());
                             }
                             else {
                                 continuar = false;
